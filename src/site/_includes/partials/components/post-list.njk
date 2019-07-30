@@ -1,0 +1,20 @@
+{% if postListItems.length %}
+  <section class="l-container">
+    <h2>{{ postListHeading }}</h2>
+    <ol reversed class="l-post-list">
+      {% for item in postListItems %}
+        <li class="post-item">
+          <h3 class="post-heading">
+            <a class="post-link" href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
+          </h3>
+          <p>
+            <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+          </p>
+          {% if item.data.description %}
+            <p>{{item.data.description}}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endif %}

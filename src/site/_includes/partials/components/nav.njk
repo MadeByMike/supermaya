@@ -1,0 +1,29 @@
+{% if navigation.items %}
+  <nav>
+    <ul class="l-nav">
+      {% for item in navigation.items %}
+        {% set externalAttribute = '' %}
+        {% set currentAttribute = '' %}
+
+        {% if item.external %}
+          {% set externalAttribute = ' rel="external"' %}
+        {% endif %}
+
+        {% if page.url == item.url %}
+          {% set currentAttribute = ' aria-current="page"' %}
+        {% endif %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.url }}"{{ externalAttribute | safe }}{{ currentAttribute | safe }}>
+            {% if item.url == '/feed.xml' %}
+              <div class="nav-icon">
+                {% include "partials//icons/feed.svg" %}
+              </div>
+            {% endif %}
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

@@ -1,0 +1,16 @@
+---
+permalink: main.css
+---
+{% set css %}
+{% include "css/initialise.css" %}
+{% include "css/util.css" %}
+{% include "css/typography.css" %}
+{% include "css/page.css" %}
+{% include "css/container.css" %}
+{% include "css/tags.css" %}
+{% include "css/post-meta.css" %}
+{% include "css/nav.css" %}
+{% include "css/post-list.css" %}
+{% include "css/highlight.css" %}
+{% endset %}
+{{ css | safe }}

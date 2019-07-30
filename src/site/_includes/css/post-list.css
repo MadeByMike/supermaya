@@ -1,0 +1,8 @@
+.l-post-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.l-post-list * + * {
+  margin-top: var(--s-2);
+}

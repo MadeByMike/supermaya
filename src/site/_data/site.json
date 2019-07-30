@@ -1,0 +1,10 @@
+{
+  "showThemeCredit": true,
+  "name": "Site Name",
+  "shortDesc": "Lorem ...",
+  "url": "/",
+  "authorEmail": "mike@madebymike.com.au",
+  "authorHandle": "@MikeRiethmuller",
+  "authorName": "Mike Riethmuller",
+  "postsPerPage": 5
+}
