@@ -40,6 +40,9 @@ module.exports = function(config) {
       .slice(0, site.postsPerPage);
   });
 
+  // Passthrough
+  config.addPassthroughCopy("src/site/js/");
+
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);

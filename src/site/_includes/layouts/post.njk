@@ -17,6 +17,8 @@
     {% include "partials/components/intro.njk" %}
     {{ content | safe }}
 
+    {% include "partials/components/comments.njk" %}
+
     {% if tags %}
       <footer>
         <ul class="l-tags">

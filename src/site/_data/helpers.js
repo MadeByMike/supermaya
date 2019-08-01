@@ -1,3 +1,6 @@
+var sass = require("node-sass");
+var fs = require("fs");
+
 module.exports = {
   getReadingTime(text) {
     const wordsPerMinute = 200;
