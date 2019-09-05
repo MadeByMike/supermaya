@@ -15,7 +15,10 @@ function graphql(query, variables = {}) {
 
 const GET_COMMENTS = `
   query GetComments($path: String!) {
-    allComments(where: {path: $path}){
+    allComments(where: {
+      path: $path
+      approved: true
+    }){
       id
       name
       comment
