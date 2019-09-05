@@ -1,0 +1,38 @@
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Post' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+{% set introSummary %}
+<p class="post-meta">
+  {% if date %}
+    <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+  {% endif %}
+  <span role="text">—
+    {{ helpers.getReadingTime(content) }}
+    minute read</span>
+</p>
+{% endset %}
+
+{% block content %}
+  <article class="h-entry">
+    <l-stack>
+      {% include "partials/intro.njk" %}
+      {{ content | safe }}
+
+      {% if tags %}
+        <footer>
+          <ul class="l-post-tags">
+            {% for item in tags %}
+              <li>
+                <a class="post-tag" href="/tags/{{ item }}">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </footer>
+      {% endif %}
+    </l-stack>
+  </article>
+  {% include "partials/keystone-comments.njk" %}
+  {% include "partials/web-mentions.njk" %}
+{% endblock %}

@@ -1,0 +1,218 @@
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * Theme by Mike Riethmuller
+ */
+$saturation: 10%;
+
+$default: #bebebe;
+$darker: #616161;
+$darkest: #1a191a;
+$grey-chateau: hsl(217, $saturation, 65%);
+$olive-haze: hsl(39, $saturation, 50%);
+$dusty-grey: hsl(0, $saturation, 62%);
+$amethyst-smoke: hsl(277, $saturation, 65%);
+
+$background: $darkest;
+$selection: $default;
+$comment: $darker;
+$prolog: $default;
+$doctype: $default;
+$cdata: $default;
+$punctuation: $olive-haze;
+$namespace: $default;
+$property: $dusty-grey;
+$tag: $default;
+$boolean: $default;
+$constant: $default;
+$symbol: $default;
+$deleted: $default;
+$selector: $grey-chateau;
+$attr-name: $default;
+$string: $default;
+$char: $default;
+$builtin: $default;
+$inserted: $default;
+$number: $amethyst-smoke;
+$operator: $dusty-grey;
+$entity: $default;
+$url: $default;
+$atrule: $default;
+$attr-value: $dusty-grey;
+$keyword: $grey-chateau;
+$function: $default;
+$class-name: $default;
+$regex: $amethyst-smoke;
+$important: $default;
+$variable: $default;
+$entity: $default;
+$important: $default;
+$string-css: $default;
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: $default;
+  background: none;
+  font-family: var(--font-mono);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: $selection;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  background: $selection;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: $background;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment {
+  color: $comment;
+}
+.token.prolog {
+  color: $prolog;
+}
+.token.doctype {
+  color: $doctype;
+}
+.token.cdata {
+  color: $cdata;
+}
+.token.punctuation {
+  color: $punctuation;
+}
+.token.namespace {
+  color: $namespace;
+}
+.token.property {
+  color: $property;
+}
+.token.tag {
+  color: $tag;
+}
+.token.boolean {
+  color: $boolean;
+}
+.token.constant {
+  color: $constant;
+}
+.token.symbol {
+  color: $symbol;
+}
+.token.deleted {
+  color: $deleted;
+}
+.token.selector {
+  color: $selector;
+}
+.token.attr-name {
+  color: $attr-name;
+}
+.token.string {
+  color: $string;
+}
+.token.char {
+  color: $char;
+}
+.token.builtin {
+  color: $builtin;
+}
+.token.inserted {
+  color: $inserted;
+}
+.token.number {
+  color: $number;
+}
+.token.operator {
+  color: $operator;
+}
+.token.entity {
+  color: $entity;
+}
+.token.url {
+  color: $url;
+}
+.token.atrule {
+  color: $atrule;
+}
+.token.attr-value {
+  color: $attr-value;
+}
+.token.keyword {
+  color: $keyword;
+}
+.token.function {
+  color: $function;
+}
+.token.class-name {
+  color: $class-name;
+}
+.token.regex {
+  color: $regex;
+}
+.token.important {
+  color: $important;
+}
+.token.variable {
+  color: $variable;
+}
+.token.entity {
+  color: $entity;
+  cursor: help;
+}
+// Non colors
+.important {
+  color: $important;
+}
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+// Language specific styles
+.language-css {
+  .token .string,
+  .style .string {
+    color: $string-css;
+  }
+}

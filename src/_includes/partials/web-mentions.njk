@@ -1,0 +1,60 @@
+{% set fullUrl = site.url + page.url %}
+{% set likes = webmentions.getLikes(fullUrl) %}
+{% set mentions = webmentions.getMentions(fullUrl) %}
+
+<aside class="">
+    {% if likes.length %}
+        <h2>Likes</h2>
+        <p id="likes-desc" class="visually-hidden">A list of people that have liked this page on social media or via their own blogs</p>
+        <ol aria-describedby="likes-desc" class="">
+            {% for like in likes %}
+                <li>
+                    <img class="avatar" src="{{ like.author.photo }}" alt="Image of {{ like.author.name }}" loading="lazy"/>
+                    <li>
+                    {% endfor %}
+            </ol>
+        {% endif %}
+        {% if mentions.length %}
+            <h2>Replies</h2>
+            <p id="mentions-desc" class="visually-hidden">A list of comments and replies from social media or people’s websites</p>
+            <ol class="sf-flow comments">
+                {% for item in mentions %}
+                    <li>
+                        <article class="" id="webmention-{{ webmention['wm-id'] }}">
+                            <img class="" src="{{ item.author.photo}}" alt="Image of {{ item.author.name }}" loading="lazy"/>
+                            <div class="">
+                                <header>
+                                    <h3 class="">{{ item.author.name }}</h3>
+                                    <p>
+                                        <time datetime="{{ item['wm-received'] | w3DateFilter }}" class="dt-published">{{ item['wm-received'] | dateFilter }}</time>
+                                    </p>
+                                    <p class="">
+                                        <a href="{{ item.url }}" class="">Link to source</a>
+                                    </p>
+                                </header>
+                                {% if item.content.value %}
+                                    <div class="">
+                                        {{ item.content.value | safe }}
+                                    </div>
+                                {% else %}
+                                    <p class="">{{ item.content.text }}</p>
+                                {% endif %}
+                            </div>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+        <div class="sf-flow">
+            <h2>Leave a reply</h2>
+            <p>Post a link to a response that you’ve written to this page on your website.</p>
+            <form method="post" class="sf-flow" action="https://webmention.io/andy-bell.design/webmention">
+                <label for="responseField" class="weight-bold">Your URL</label>
+                <div class="box-flex" style="--flow-space: 0.3rem">
+                    <input class="input-field" type="url" name="source" id="responseField" required="required"/>
+                    <button type="submit" class="button weight-bold text-500">Send</button>
+                </div>
+                <input type="hidden" name="target" value="{{ site.url }}{{ page.url }}"/>
+            </form>
+        </div>
+    </aside>

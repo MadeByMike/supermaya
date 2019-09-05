@@ -1,0 +1,16 @@
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Page' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+
+{% block content %}
+  <article class="h-entry">
+    <l-stack>
+      {% include "partials/intro.njk" %}
+      {{ content | safe }}
+    </l-stack>
+  </article>
+{% endblock %}
+
+{{ content | safe }}

@@ -1,0 +1,15 @@
+.l-post-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  background: var(--color-lightish);
+  text-decoration: none;
+  margin-right: 5px;
+}

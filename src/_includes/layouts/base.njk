@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+
+    <link rel="stylesheet" href="/css/main.css"/>
+    <script type="text/javascript" src="/js/main.js"></script>
+    {% include "partials/global/meta-info.njk" %}
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main-content">Skip to content</a>
+    <div class="l-page">
+      <header class="l-header" role="banner">
+        {% include "partials/global/site-head.njk" %}
+      </header>
+      <main id="main-content" tabindex="-1" class="l-main">
+        {% block content %}{% endblock content %}
+        {% include "partials/global/site-foot.njk" %}
+        {% block foot %}{% endblock %}
+      </main>
+    </div>
+  </body>
+</html>

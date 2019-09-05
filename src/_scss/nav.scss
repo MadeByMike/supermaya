@@ -1,0 +1,27 @@
+.l-nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  text-decoration: none;
+  line-height: var(--line-height-small);
+  font-weight: 700;
+}
+.nav-link:not([aria-current='true']):hover,
+.nav-link:not([aria-current='true']):focus {
+  text-decoration: underline;
+}
+
+.l-nav * + * {
+  margin-top: var(--s-1);
+}
+
+.nav-icon {
+  width: 20px;
+  margin-right: var(--s-5);
+}

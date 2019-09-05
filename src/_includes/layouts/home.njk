@@ -1,0 +1,24 @@
+{% extends 'layouts/base.njk' %}
+{% set pageType = 'Homepage' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+
+{# Post list content #}
+{% set postListHeading = postsHeading %}
+{% set postListItems = collections.postFeed %}
+
+{# Archive link #}
+{% if postListItems.length < collections.posts.length %}
+  {% set paginationNextText = archiveButtonText %}
+  {% set paginationNextUrl = '/archive' %}
+{% endif %}
+
+{% block content %}
+  <l-stack>
+    {% include "partials/intro.njk" %}
+    {{ content | safe }}
+    {% include "partials/post-list.njk" %}
+    {% include "partials/pagination.njk" %}
+  </l-stack>
+{% endblock %}
