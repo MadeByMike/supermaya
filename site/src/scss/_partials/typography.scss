@@ -1,0 +1,89 @@
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4 {
+  line-height: calc(#{$RATIO} * 0.8);
+  font-family: $FONT_HEADINGS;
+  font-weight: 700;
+  hyphens: auto;
+}
+.h1,
+h1 {
+  font-size: $SCALE-4;
+}
+.h2,
+h2 {
+  font-size: $SCALE-3;
+}
+.h3,
+h3 {
+  font-size: $SCALE-2;
+}
+.h4,
+h4 {
+  font-size: $SCALE-1;
+}
+.h5,
+h5 {
+  font-size: $SCALE-0;
+}
+
+ul:not([class]),
+ol:not([class]) {
+  padding-left: 1.5em;
+}
+
+li:not([class]) {
+  padding-left: 0.25em;
+}
+
+blockquote {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: solid 10px $COLOR_MID;
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: solid 1px $COLOR_MID;
+  text-align: left;
+  padding: 0.25em 0.75em;
+}
+
+pre:not([class]),
+code:not([class]) {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-family: $FONT_MONO;
+  background: $COLOR_LIGHTER;
+  border: solid 1px $COLOR_LIGHT;
+  padding: 0 5px;
+}
+pre:not([class]) {
+  min-width: 300px;
+}
+
+pre:not([class]) code:not([class]) {
+  font-size: 0.85rem;
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0 5px;
+}
+
+pre {
+  padding: $SCALE_2;
+}
+
+pre code {
+  background: transparent;
+}

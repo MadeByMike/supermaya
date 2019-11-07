@@ -1,0 +1,29 @@
+--- 
+title: Posts 
+pagination: 
+  data: collections.posts
+  size: 5
+  alias: posts 
+---
+
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading %}Posts{% endset %}
+
+{# Post list content #}
+{% set postListItems = posts %}
+
+{% if postListItems.length < collections.posts.length %}
+  {% set paginationNextText = 'Next' %}
+  {% set paginationNextUrl = pagination.nextPageHref %}
+  {% set paginationPrevUrl = pagination.previousPageHref %}
+{% endif %}
+
+{% block content %}
+  <div class="l-stack l-stack--large l-stack--large">
+    {% include "partials/intro.njk" %}
+    {% include "partials/post-list.njk" %}
+    {% include "partials/pagination.njk" %}
+  </div>
+{% endblock %}

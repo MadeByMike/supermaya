@@ -1,0 +1,20 @@
+.l-site-name {
+  display: flex;
+  align-items: center;
+}
+
+.l-site-name > * {
+  flex-shrink: 0;
+}
+
+.l-site-name > *:first-child {
+  width: 42px; // Flex doesn't correctly calc the width of SVG viewbox
+  flex-basis: 42px;
+  margin-right: 0.5rem;
+}
+
+.l-site-name--footer > *:first-child {
+  width: 32px; // Flex doesn't correctly calc the width of SVG viewbox
+  flex-basis: 32px;
+  margin-right: 0.5rem;
+}

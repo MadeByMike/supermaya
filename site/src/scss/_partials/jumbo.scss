@@ -1,0 +1,12 @@
+.l-jumbo {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.l-jumbo > * + * {
+  margin-top: 1rem;
+  max-width: 50ch;
+}

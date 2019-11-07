@@ -1,0 +1,44 @@
+.l-form-row > * {
+  display: block;
+}
+.l-form-row > * + * {
+  margin-top: 0.25rem;
+}
+.input {
+  display: inline-block;
+  width: 100%;
+  height: 2em;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  background-color: #fff;
+  border: 1px solid $COLOR_LIGHT;
+  border-radius: 2px;
+}
+
+.textarea {
+  display: inline-block;
+  width: 100%;
+  min-height: 10em;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  background-color: #fff;
+  border: 1px solid $COLOR_LIGHT;
+  border-radius: 2px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  background-color: #fff;
+  border: 1px solid $COLOR_LIGHT;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: $COLOR_LIGHTER;
+  cursor: pointer;
+}

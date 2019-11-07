@@ -1,0 +1,32 @@
+.l-pagination {
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-pagination--right {
+  justify-content: flex-end;
+}
+
+.l-pagination-link {
+  display: flex;
+  align-items: center;
+}
+
+.l-pagination-link > * {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.l-pagination-link--right > *:last-child {
+  width: 24px; // Flex doesn't correctly calc the width of SVG viewbox
+  flex-basis: 24px;
+  margin-left: 0.5rem;
+}
+
+.l-pagination-link--left > *:first-child {
+  width: 24px; // Flex doesn't correctly calc the width of SVG viewbox
+  flex-basis: 24px;
+  margin-right: 0.5rem;
+}

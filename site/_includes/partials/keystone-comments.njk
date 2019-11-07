@@ -1,0 +1,12 @@
+{% if site.keystone.comments !== false %}
+  <style>
+    {{css["keystone-comments"] | safe}}
+  </style>
+
+  <div class="l-stack">
+    <div id="keystone-comments" class="l-stack"></div>
+    <hr>
+    <div id="keystone-comments-form" class="l-stack"></div>
+    <script src="/js/keystone-comments.js" async defer></script>
+  </div>
+{% endif %}

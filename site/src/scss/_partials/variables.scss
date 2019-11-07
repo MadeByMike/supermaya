@@ -1,0 +1,21 @@
+$BASE_UNIT: 100px;
+
+$FONT_NORMAL: Helvetica Neue, Helvetica, Arial, sans-serif;
+$FONT_HEADINGS: Helvetica Neue, Helvetica, Arial, sans-serif;
+$FONT_MONO: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+$RATIO: 1.4;
+
+$SCALE--2: 1rem / $RATIO / $RATIO;
+$SCALE--1: 1rem / $RATIO;
+$SCALE-0: 1rem;
+$SCALE-1: 1rem * $RATIO;
+$SCALE-2: 1rem * $RATIO * $RATIO;
+$SCALE-3: 1rem * $RATIO * $RATIO * $RATIO;
+$SCALE-4: 1rem * $RATIO * $RATIO * $RATIO * $RATIO;
+$SCALE-5: 1rem * $RATIO * $RATIO * $RATIO * $RATIO * $RATIO;
+
+$COLOR_LIGHTER: #eaeaea;
+$COLOR_LIGHT: #ccc; // Do not use for text color
+$COLOR_MID: #767676; // Min contrast on white to pass WCAG2 AA
+$COLOR_DARK: #333;

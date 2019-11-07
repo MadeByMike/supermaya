@@ -1,0 +1,22 @@
+{% extends 'layouts/base.njk' %}
+
+{% set introSummary = content | safe %}
+
+{# Post list content #}
+{% set postListHeading = postsHeading %}
+{% set postListItems = collections.postFeed %}
+
+{# Posts link #}
+{% if postListItems.length < collections.posts.length %}
+    {% set paginationNextText = allPostsText %}
+    {% set paginationNextUrl = '/posts' %}
+{% endif %}
+
+{% block content %}
+    <div class="l-stack l-stack--large">
+        {% include "partials/intro.njk" %}
+        {% include "partials/post-list-home.njk" %}
+        {% include "partials/pagination.njk" %}
+        {% include "partials/keystone-bookmarks-list.njk" %}
+    </div>
+{% endblock %}

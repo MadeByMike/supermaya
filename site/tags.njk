@@ -1,0 +1,33 @@
+--- 
+title: Tags 
+pagination: 
+  data: collections 
+  size: 1
+  alias: tag 
+  filter: 
+    - all 
+    - nav 
+    - post 
+    - posts 
+    - tagList 
+    - postFeed 
+addAllPagesToCollections: true 
+permalink: /tags/{{ tag }}/ 
+---
+
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading %}Posts{% endset %}
+
+{# Post list content #}
+{% set postListHeading %}Posts tagged: “{{ tag }}”{% endset %}
+{% set postListItems = collections[tag] %}
+
+{% block content %}
+  <div class="l-stack l-stack--large">
+    {% include "partials/intro.njk" %}
+    {% include "partials/post-list.njk" %}
+    {% include "partials/pagination.njk" %}
+  </div>
+{% endblock %}

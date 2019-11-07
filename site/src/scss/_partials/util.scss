@@ -1,0 +1,35 @@
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.skip-content:focus {
+  top: 0;
+  border: 0;
+  clip: unset;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+  white-space: wrap;
+}
+
+.invert-link {
+  text-decoration: none;
+}
+.invert-link:hover,
+.invert-link:focus {
+  text-decoration: underline;
+}
+
+.theme {
+  background: var(--THEME_COLOR, black);
+  color: var(--THEME_Text, white);
+}

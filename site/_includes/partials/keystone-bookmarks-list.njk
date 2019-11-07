@@ -1,0 +1,7 @@
+{% if not(site.keystone.bookmarks == false)and not(bookmarks == false) %}
+  <style>
+    {{css["keystone-bookmarks"] | safe}}
+  </style>
+  <div id="keystone-bookmarks-list"></div>
+  <script src="/js/keystone-bookmarks.js" async defer></script>
+{% endif %}

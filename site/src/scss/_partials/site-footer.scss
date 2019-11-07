@@ -1,0 +1,24 @@
+.l-site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem 0;
+}
+
+.l-site-footer-split {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 3rem 0;
+}
+
+.l-site-footer-split > * {
+  flex-grow: 0;
+}
+
+.l-site-footer-split > :first-child {
+  flex-basis: 50%;
+  font-size: $SCALE--1;
+}
+
+.powered-by {
+  text-align: center;
+  font-size: $SCALE--1;
+}

@@ -1,0 +1,27 @@
+{% set postListHeadingLevel = 'h3' if postListHeading else 
+  'h2' %}
+
+{% if postListItems.length %}
+  <section class="l-container">
+    <div class="l-stack">
+      {% if postListHeading %}
+        <h2 class="h3">{{ postListHeading }}</h2>
+      {% endif %}
+      <ul class="l-post-stack" reversed>
+        {% for item in postListItems %}
+          <li class="post-stack-item">
+            <{{postListHeadingLevel}} class="h4">
+              <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
+            </{{postListHeadingLevel}}>
+            <p>
+              <time class="post-stack-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+            </p>
+            {% if item.data.description %}
+              <p>{{item.data.description}}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endif %}

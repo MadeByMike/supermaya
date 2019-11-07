@@ -1,0 +1,28 @@
+.l-post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.l-post-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  background: $COLOR_LIGHTER;
+  border: solid 1px $COLOR_LIGHT;
+  text-decoration: none;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.post-tag:hover,
+.post-tag:focus {
+  text-decoration: underline;
+  background: #fff;
+}

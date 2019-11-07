@@ -1,0 +1,124 @@
+@import "./_partials/variables.scss";
+
+.clap-button {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  border: solid 2px $COLOR_MID;
+  cursor: pointer;
+  background: white;
+}
+
+.clap-button > svg {
+  width: 40px;
+  flex-shrink: 0;
+  flex-basis: 40px;
+  margin: 4px;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  transform: rotate(-45deg);
+}
+
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@keyframes love {
+  100% {
+    top: -100%;
+    opacity: 0.2;
+  }
+}
+
+.clap-button:focus {
+  background: $COLOR_LIGHTER;
+}
+.clap-button:hover {
+  background: $COLOR_LIGHTER;
+
+  .heart {
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    background: $COLOR_LIGHT;
+    animation: love 5s infinite;
+  }
+
+  .heart-1 {
+    width: 10px;
+    height: 10px;
+  }
+
+  .heart-2 {
+    width: 5px;
+    height: 5px;
+    left: 40%;
+    animation: love 4s infinite;
+    animation-delay: 1s;
+  }
+
+  .heart-3 {
+    width: 8px;
+    height: 8px;
+    left: 70%;
+    animation: love 6s infinite;
+    animation-delay: 2s;
+  }
+
+  .heart-4 {
+    width: 9px;
+    height: 9px;
+    left: 90%;
+    animation: love 6s infinite;
+    animation-delay: 1s;
+  }
+
+  .heart-4 {
+    width: 5px;
+    height: 5px;
+    left: 20%;
+    animation: love 4s infinite;
+    animation-delay: 1.5s;
+  }
+}
+
+.show-some-love {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 200px;
+  font-size: $SCALE--1;
+}

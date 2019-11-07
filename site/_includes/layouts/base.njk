@@ -1,0 +1,70 @@
+{# Intro content #}
+{% set introHeading = title %}
+{% set footerSummary = site.footerSummary %}
+{% set metaDescription = description if description else 
+  site.shortDesc %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+
+    {% if site.criticalCSS %}
+      <link rel="preload" as="style" href="/css/main.css" onload="this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="/css/main.css">
+      </noscript>
+    {% else %}
+      <link rel="stylesheet" href="/css/main.css">
+    {% endif %}
+
+    {% if site.keystone.login !== false %}
+      {% if site.criticalCSS %}
+        <link rel="preload" as="style" href="/css/keystone-login.css" onload="this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="/css/keystone-login.css">
+        </noscript>
+      {% else %}
+        <link rel="stylesheet" href="/css/keystone-login.css">
+      {% endif %}
+    {% endif %}
+
+    {% include "partials/global/meta-info.njk" %}
+    {% block head %}{% endblock %}
+    {% if site.theme %}
+      <style>
+        :root {
+          {% if site.theme.background %}
+            --THEME_COLOR: {{site.theme.background}};
+          {% endif %}
+          {% if site.theme.background %}
+            --THEME_TEXT: {{site.theme.text}};
+          {% endif %}
+        }
+      </style>
+    {% endif %}
+
+  </head>
+  <body>
+    <a class="visually-hidden skip-content" href="#main-content">Skip to content</a>
+    <div class="l-page">
+      {% include "partials/global/site-head.njk" %}
+      <main id="main-content" tabindex="-1">
+        <div class="l-stack l-stack--large">
+          {% block content %}{% endblock content %}
+          {% block foot %}
+            {% include "partials/global/site-foot.njk" %}
+          {% endblock %}
+        </div>
+      </main>
+    </div>
+    <script type="text/javascript" src="/js/service-worker.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    {% if site.keystone.login !== false %}
+      <script type="text/javascript" src="/js/keystone-login.js"></script>
+    {% endif %}
+  </body>
+</html>

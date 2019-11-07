@@ -1,0 +1,32 @@
+// These class to style body content generated in markdown
+// They are technically theme classes and break with the style architecture - but we can't control markdown
+
+.t-page .l-stack > p > img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.t-page .l-stack > img,
+.t-page .l-stack > pre,
+.t-page .l-stack > table,
+.t-page .l-stack > ol,
+.t-page .l-stack > blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.t-page .l-stack > ul {
+  margin-bottom: 2rem;
+}
+
+.l-stack > h1,
+.l-stack > h2,
+.l-stack > h3,
+.l-stack > h4,
+.l-stack > h5,
+.l-stack > .h1,
+.l-stack > .h2,
+.l-stack > .h3,
+.l-stack > .h4,
+.l-stack > .h5 {
+  margin-top: 2rem;
+}

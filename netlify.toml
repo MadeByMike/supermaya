@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+[template.environment]
+  KEYSTONE_API = "Paste your Keystone API URL here"

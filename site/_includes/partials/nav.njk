@@ -1,0 +1,31 @@
+{% set ariaNavLabel = 'primary' %}
+{% if navigation.items %}
+  <nav>
+    <ul class="l-navigation navigation" aria-label="{{ ariaNavLabel }}">
+      {% for item in navigation.items %}
+        {% set externalAttribute = '' %}
+        {% set currentAttribute = '' %}
+
+        {% if item.external %}
+          {% set externalAttribute = ' rel="external"' %}
+        {% endif %}
+
+        {% if page.url == item.url %}
+          {% set currentAttribute = ' aria-current="page"' %}
+        {% endif %}
+
+        <li>
+          <a href="{{ item.url }}" {{ externalAttribute | safe }} {{ currentAttribute | safe }}>
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+
+      {% if site.keystone.login !== false %}
+        <li>
+          <a href="/login" class="l-login" id="keystone-nav-login">Login</a>
+        </li>
+        {% endif%}
+      </ul>
+    </nav>
+  {% endif %}

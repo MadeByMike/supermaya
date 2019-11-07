@@ -1,0 +1,25 @@
+.l-navigation {
+  display: flex;
+}
+.l-navigation > * + * {
+  margin-left: 0.5rem;
+}
+
+.navigation {
+  list-style: none;
+}
+
+$footer-nav-breakpoint: 1000px;
+.l-footer-nav {
+  --footer-nav-display: none;
+}
+
+@media (min-width: $footer-nav-breakpoint) {
+  .l-footer-nav {
+    --footer-nav-display: block;
+  }
+}
+
+.l-footer-nav {
+  display: var(--footer-nav-display);
+}

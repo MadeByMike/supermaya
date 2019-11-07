@@ -1,0 +1,29 @@
+{% set paginationModifierClasss = 'l-pagination--right' if paginationNextUrl and not paginationPrevUrl else '' %}
+
+{% if paginationNextUrl or paginationPrevUrl %}
+  <footer class="l-container">
+    <nav class="l-pagination {{paginationModifierClasss}}">
+      {% if paginationPrevUrl %}
+        <a href="{{ paginationPrevUrl }}" data-direction="backwards" class="l-pagination-link l-pagination-link--left">
+          <span aria-hidden="true">
+            {% include "partials/icons/arrow-left.svg" %}
+          </span>
+
+          <span>
+            {{ paginationPrevText if paginationPrevText else 'Previous' }}
+          </span>
+        </a>
+      {% endif %}
+      {% if paginationNextUrl %}
+        <a href="{{ paginationNextUrl }}" data-direction="forwards" class="l-pagination-link l-pagination-link--right">
+          <span>
+            {{ paginationNextText if paginationNextText else 'Next' }}
+          </span>
+          <span aria-hidden="true">
+            {% include "partials/icons/arrow-right.svg" %}
+          </span>
+        </a>
+      {% endif %}
+    </nav>
+  </footer>
+{% endif %}

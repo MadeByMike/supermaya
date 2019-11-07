@@ -1,0 +1,47 @@
+@import "./_partials/variables.scss";
+
+.l-bookmark-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 200px;
+  font-size: $SCALE--1;
+}
+
+.bookmark-button {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  border: solid 2px $COLOR_MID;
+  cursor: pointer;
+  background: white;
+}
+
+.bookmark-button > svg {
+  width: 40px;
+  flex-shrink: 0;
+  flex-basis: 40px;
+  margin: 4px;
+}
+
+.bookmark-button:focus,
+.bookmark-button:hover {
+  background: $COLOR_LIGHTER;
+}
+
+.bookmark-button--bookmarked {
+  background: $COLOR_LIGHTER;
+}
+
+.bookmark-button--bookmarked:focus,
+.bookmark-button--bookmarked:hover {
+  background: #fff;
+}

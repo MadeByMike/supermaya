@@ -1,0 +1,26 @@
+{% extends 'layouts/base.njk' %}
+
+{% set introSummary %}
+<div class="l-stack">
+  {% if description %}
+    <p class="post-description">{{ description | safe }}</p>
+  {% endif %}
+</div>
+{% endset %}
+
+{% block content %}
+  <div class="l-stack">
+    <article class="h-entry t-page" class="l-container">
+      <div class="l-stack l-stack--large">
+        {% include "partials/post-intro.njk" %}
+        <div class="l-container">
+          <div class="l-stack" >
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+{% endblock %}
+
+{{ content | safe }}

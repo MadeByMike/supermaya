@@ -1,0 +1,82 @@
+:root {
+  line-height: $RATIO + 0.2;
+  font-family: $FONT_NORMAL;
+}
+
+@media (min-width: 800px) and (min-height: 500px) {
+  :root {
+    font-size: 1.375rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body,
+dd,
+dl,
+dt,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+li,
+ol,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-behavior: smooth;
+  font-size: inherit;
+  min-height: 100vh;
+}
+a:not([class]) {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  cursor: pointer;
+}
+a:not([class]):hover {
+  text-decoration: none;
+}
+
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  line-height: normal;
+}
+
+img {
+  max-width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus {
+  outline: 2px solid $COLOR_LIGHT;
+  outline-offset: 2px;
+}
+[tabindex="-1"]:focus {
+  outline: none;
+}
