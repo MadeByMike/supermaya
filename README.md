@@ -4,9 +4,9 @@
     <p>Supermaya is an <a href="https://github.com/11ty/eleventy/">Eleventy</a> starter kit designed to help you add rich features to a blog or website without the need for a complicated build process.</p>
     <br><img src="site/static/screenshot.png" width="500"/>
     <br>
+    
+    <p>See a <a href="https://supermaya-demo.netlify.com/">Live Demo</a></p>
 </div>
-
-See a [Live Demo](https://supermaya-demo.netlify.com/)
     
 It comes with all the blog standard features:
 
