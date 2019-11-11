@@ -175,11 +175,12 @@ const loginUI = document.getElementById("keystone-nav-login");
 if (loginUI) {
   getAuthenticatedUser()
     .then(authenticatedUser => {
-      loginUI.innerHTML = `Login ${loginIcon}`; // Assume login first
       if (authenticatedUser) {
         createLogoutEvent(authenticatedUser);
         loginUI.addEventListener("click", createLogoutEvent(authenticatedUser));
         loginUI.innerHTML = `Logout ${logoutIcon}`;
+      } else {
+        loginUI.innerHTML = "";
       }
     })
     .catch(e => {

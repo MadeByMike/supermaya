@@ -26,7 +26,15 @@ export const getAuthenticatedUser = () =>
         }
       }
     }
-  `).then(({ data: { authenticatedUser } }) => authenticatedUser);
+  `).then(result => {
+    if (result && result.data) {
+      const {
+        data: { authenticatedUser }
+      } = result;
+      return authenticatedUser;
+    }
+    return false;
+  });
 
 export const validateInputs = fields =>
   fields.every(field => field.value !== "");
