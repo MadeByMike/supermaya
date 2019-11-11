@@ -4,7 +4,9 @@
     <p>Supermaya is an <a href="https://github.com/11ty/eleventy/">Eleventy</a> starter kit designed to help you add rich features to a blog or website without the need for a complicated build process.</p>
     <br><img src="site/static/screenshot.png" width="500"/>
     <br>
-    <p>See a <a href="https://supermaya-demo.netlify.com/">Live Demo</a></p>
+    <p>See a <a href="https://supermaya-demo.netlify.com/">Live Demo</a>.</p>
+    <p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/MadeByMike/supermaya">Deploy Supermaya on it's own</a></p>
+    <p><a href="https://heroku.com/deploy?template=https://github.com/MadeByMike/keystone-jamstack-plus">Deploy Supermaya with Keystone</a> to allow user generated content. (following instructions during installation to connect the API).</p>
 </div>
     
 It comes with all the blog standard features:
