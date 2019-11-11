@@ -39,7 +39,10 @@ Additional features:
 
 These additional features that have persistent data including user generated content. On JamStack sites including rich content usually means complicated build processes and multiple third-party services. This doesn't sit well with me since owning my own data and tinkering with the platform is a big motivation for building a static personal site.
 
-That's why I opted to pair Supermaya with [KeystoneJS](https://keystonejs.com/) to create a unified API that you own and manage. Each of these features are added progressively with JavaScript and will fail gracefully if not configured or the server can't be reached. You can opt-out on a per feature basis by modifying the data in `site/_data/site.js`, or on a per-page basis with front-matter.
+That's why I opted to pair Supermaya with [KeystoneJS](https://keystonejs.com/) to create a unified API that you own and manage. Each of these features are optional and added progressively with JavaScript and will fail gracefully if not configured or the server can't be reached. You can opt-out on a per feature basis by modifying the data in `site/_data/site.js`, or on a per-page basis with front-matter.
+
+
+**Note**: If you don't want any of these features you can [deploy Supermaya on it's own](https://app.netlify.com/start/deploy?repository=https://github.com/MadeByMike/supermaya) or you can [deploy Supermaya and Keystone together](https://heroku.com/deploy?template=https://github.com/MadeByMike/keystone-jamstack-plus) and connect the API by following the instructions during installation. This will deploy Keystone to Herouk and Supermaya to Netlify, as well as configure your Admin user and API URL.
 
 To get started deploy the [Keystone JAMstack plus starter kit](https://github.com/MadeByMike/keystone-jamstack-plus) platform to Heroku. Once installed visit the site on Heroku and copy your Keystone API URL. Follow the instructions to automatically deploy Supermaya to Netlify.
 
@@ -87,7 +90,7 @@ site/_data/site.js
 
 ## Toggling Keystone features
 
-If you connected Sypermaya to a keystone backend you can toggle features under the `keystone` key in:
+If you connected Sypermaya to a Keystone backend you can toggle features under the `keystone` key in:
 
 ```
 site/_data/site.js
