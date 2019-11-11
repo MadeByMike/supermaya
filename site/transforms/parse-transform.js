@@ -2,6 +2,9 @@ const jsdom = require("@tbranyen/jsdom");
 const { JSDOM } = jsdom;
 const slugify = require("slugify");
 
+// This transform is almost entirely the work of Andy Bell
+// I loved the idea so much I "borrowed" it.
+
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith(".html")) {
     const DOM = new JSDOM(value, {

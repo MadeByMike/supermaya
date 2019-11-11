@@ -21,16 +21,7 @@
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
 
-    {% if site.keystone.login !== false %}
-      {% if site.criticalCSS %}
-        <link rel="preload" as="style" href="/css/keystone-login.css" onload="this.rel='stylesheet'">
-        <noscript>
-          <link rel="stylesheet" href="/css/keystone-login.css">
-        </noscript>
-      {% else %}
-        <link rel="stylesheet" href="/css/keystone-login.css">
-      {% endif %}
-    {% endif %}
+    {% include "partials/services/keystone-login-styles.njk" %}
 
     {% include "partials/global/meta-info.njk" %}
     {% block head %}{% endblock %}
@@ -63,8 +54,6 @@
     </div>
     <script type="text/javascript" src="/js/service-worker.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    {% if site.keystone.login !== false %}
-      <script type="text/javascript" src="/js/keystone-login.js"></script>
-    {% endif %}
+    {% include "partials/services/keystone-login-scripts.njk" %}
   </body>
 </html>

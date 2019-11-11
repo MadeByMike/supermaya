@@ -8,15 +8,15 @@
 
 {# Posts link #}
 {% if postListItems.length < collections.posts.length %}
-    {% set paginationNextText = allPostsText %}
-    {% set paginationNextUrl = '/posts' %}
+  {% set paginationNextText = allPostsText %}
+  {% set paginationNextUrl = '/posts' %}
 {% endif %}
 
 {% block content %}
-    <div class="l-stack l-stack--large">
-        {% include "partials/intro.njk" %}
-        {% include "partials/post-list-home.njk" %}
-        {% include "partials/pagination.njk" %}
-        {% include "partials/keystone-bookmarks-list.njk" %}
-    </div>
+  <div class="l-stack l-stack--large">
+    {% include "partials/intro.njk" %}
+    {% include "partials/post-list-home.njk" %}
+    {% include "partials/pagination.njk" %}
+    {% include "partials/services/keystone-bookmarks-list.njk" %}
+  </div>
 {% endblock %}

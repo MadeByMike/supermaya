@@ -1,5 +1,5 @@
 ---
-title: JamStack Plus
+title: JAMstack Plus
 date: "2019-10-30"
 description: "The growing complexity of JAMstack sites is now often comparable to the set-up and matainance costs of platforms like WordPress. We need a better approach."
 tags:
