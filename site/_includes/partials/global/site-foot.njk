@@ -1,4 +1,3 @@
-{% set ariaNavLabel = 'footer' %}
 <footer role="contentinfo">
   <div class="theme">
     <div class="l-container">
@@ -14,6 +13,7 @@
             {% endif %}
           </div>
           <div class="l-footer-nav">
+            {% set navLocation = 'footer' %}
             {% include "partials/nav.njk" %}
           </div>
         </div>

@@ -175,12 +175,15 @@ const loginUI = document.getElementById("keystone-nav-login");
 if (loginUI) {
   getAuthenticatedUser()
     .then(authenticatedUser => {
-      if (authenticatedUser) {
+      if (authenticatedUser === false) {
+        // null = unauthenticated User
+        // false = failed to get User info (API error)
+
+        loginUI.innerHTML = "";
+      } else {
         createLogoutEvent(authenticatedUser);
         loginUI.addEventListener("click", createLogoutEvent(authenticatedUser));
         loginUI.innerHTML = `Logout ${logoutIcon}`;
-      } else {
-        loginUI.innerHTML = "";
       }
     })
     .catch(e => {
