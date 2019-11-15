@@ -58,7 +58,9 @@ module.exports = function(config) {
     config.addWatchTarget("site/src/scss");
     config.addWatchTarget("site/src/js");
   } else {
-    console.log("No additional watch targets");
+    console.log(
+      "A future version of 11ty will allow live-reloading of JS and Sass. You can upload 11ty with the next release to get this."
+    );
   }
 
   return {
