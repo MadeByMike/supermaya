@@ -6,6 +6,9 @@ tags:
   - demo-content
   - sample-post
   - blog
+comments: false
+claps: false
+bookmarks: false
 ---
 
 Traditionally adding features that have persistent data and user generated content on JAMstack sites is difficult. Many solutions involve complicated build processes and multiple third-party services.
