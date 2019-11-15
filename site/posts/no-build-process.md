@@ -22,7 +22,7 @@ Supermaya makes use of both these features to compile Sass, Webpack JavaScript f
 
 ## CSS
 
-In Sypermaya SCSS files are compiled on-the-fly and added to global data. This means you can write inline CSS directly into templates and partials like this: `<style>{{css["compilation-target"] | safe}}</style>`. Where _"compilation-target"_ is the key added to the list of SCSS files to compile in the data file:
+In Supermaya SCSS files are compiled on-the-fly and added to global data. This means you can write inline CSS directly into templates and partials like this: `<style>{{css["compilation-target"] | safe}}</style>`. Where _"compilation-target"_ is the key added to the list of SCSS files to compile in the data file:
 
 ```
 site/_data/css.js
