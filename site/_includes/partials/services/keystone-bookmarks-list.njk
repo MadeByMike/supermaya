@@ -1,4 +1,4 @@
-{% if not(site.keystone.bookmarks == false)and not(bookmarks == false) %}
+{% if site.keystone.bookmarks !== false and bookmarks !== false %}
   <style>
     {{css["keystone-bookmarks"] | safe}}
   </style>

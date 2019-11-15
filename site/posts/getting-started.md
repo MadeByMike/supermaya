@@ -6,7 +6,6 @@ tags:
   - demo-content
   - sample-post
   - blog
-comments: false
 ---
 
 It comes with all the blog standard features:
