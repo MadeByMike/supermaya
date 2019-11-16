@@ -86,7 +86,7 @@ site/_data/navigation.json
 
 ## Changing the color scheme
 
-Sypermaya includes basic theming. Select an alternative to the black and white feature colors by modifying the `theme` key in:
+Supermaya includes basic theming. Select an alternative to the black and white feature colors by modifying the `theme` key in:
 
 ```
 site/_data/site.js
@@ -94,7 +94,7 @@ site/_data/site.js
 
 ## Toggling Keystone features
 
-If you connected Sypermaya to a Keystone backend you can toggle features under the `keystone` key in:
+If you connected Supermaya to a Keystone backend you can toggle features under the `keystone` key in:
 
 ```
 site/_data/site.js
@@ -102,7 +102,7 @@ site/_data/site.js
 
 ## Working with SCSS
 
-In Sypermaya SCSS files are compiled on-the-fly by 11ty and added to data. This means you can write inline CSS directly into templates and partials like this: `<style>{{css["compilation-target"] | safe}}</style>`. Where "compilation-target" is the key added to the list of SCSS files to compile in:
+In Supermaya SCSS files are compiled on-the-fly by 11ty and added to data. This means you can write inline CSS directly into templates and partials like this: `<style>{{css["compilation-target"] | safe}}</style>`. Where "compilation-target" is the key added to the list of SCSS files to compile in:
 
 ```
 site/_data/css.js
@@ -114,7 +114,7 @@ Source files for scss have been added to the directory `site/src/scss`.
 
 ## Working with JavaScript
 
-Similar to how SCSS works, JavaScript files in Sypermaya are also compiled on-the-fly using Webpack.
+Similar to how SCSS works, JavaScript files in Supermaya are also compiled on-the-fly using Webpack.
 
 The Webpack configuration contains a loader for `.js` files that will transpile ES6 to ES5 meaning you can safely write modern JavaScript. The Webpack configuration can be extended or modified in: `site/utils/compile-webpack.js`.
 
@@ -132,7 +132,7 @@ Source files for javascript have been added to the directory `site/src/js`.
 
 ## Critical CSS
 
-Sypermaya is capable of generating criticalCSS although this is turned off by default for performance reasons. You can turn this feature on by modifying:
+Supermaya is capable of generating criticalCSS although this is turned off by default for performance reasons. You can turn this feature on by modifying:
 
 ```
 site/_data/site.js
