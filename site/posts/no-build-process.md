@@ -34,7 +34,7 @@ Source files for `scss` can be found in the directory `site/src/scss`.
 
 ## JavaScript
 
-Similar to the CSS, JavaScript in Sypermaya are also compiled on-the-fly and added to global data.
+Similar to the CSS, JavaScript in Supermaya are also compiled on-the-fly and added to global data.
 
 This is done with Babel and Webpack. The Webpack configuration contains a loader for `.js` files that will transpile from ES6 to ES5 meaning you can safely write modern JavaScript. The Webpack configuration can be extended or modified in: `site/utils/compile-webpack.js`.
 
@@ -52,7 +52,7 @@ Source files for javascript have been added to the directory `site/src/js`.
 
 ## Critical CSS
 
-Sypermaya is capable of generating criticalCSS although, for performance reasons, this is turned off by default. You can turn this feature on by modifying:
+Supermaya is capable of generating criticalCSS although, for performance reasons, this is turned off by default. You can turn this feature on by modifying:
 
 ```
 site/_data/site.js

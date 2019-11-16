@@ -21,9 +21,9 @@ Keystone is a back-end service and therefore can't be deployed to Netlify. Not a
 
 If you want to add any kind of rich features to a static site and want to retain control of the platform, and ownership of data, Keystone is a good choice. It's open source and highly flexible in ways that third-party services can't provide.
 
-To help add user generated content static sites I built the [Keystone JAMstack Plus starter kit](https://github.com/MadeByMike/keystone-jamstack-plus) for Keystone that ties in with Sypermaya. It allows you to skip a lot of the overhead of deploying and hosting a CMS like WordPress or attempting to unify many different APIs in a build process. Keystone's package based architecture means you can build tiny streamlined CMS and API designed specifically for your content.
+To help add user generated content to static sites I built the [Keystone JAMstack Plus starter kit](https://github.com/MadeByMike/keystone-jamstack-plus) for Keystone that ties in with Supermaya. It allows you to skip a lot of the overhead of deploying and hosting a CMS like WordPress or attempting to unify many different APIs in a build process. Keystone's package based architecture means you can build tiny streamlined CMS and API designed specifically for your content.
 
-Don't need rich features? Although Sypermaya has ties into Keystone it absolutely stands on it's own as a great static site template. It was not created for Keystone but it was created to make it a little easier to go beyond purely static content if you need.
+Don't need rich features? Although Supermaya has ties into Keystone it absolutely stands on it's own as a great static site template. It was not created for Keystone but it was created to make it a little easier to go beyond purely static content if you need.
 
 If you've already deployed Supermaya you will need to add a `KEYSTONE_API` environmental variable to your front-end.
 
