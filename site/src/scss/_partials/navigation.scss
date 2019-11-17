@@ -1,6 +1,11 @@
 .l-navigation {
   display: flex;
 }
+
+.l-navigation > * {
+  white-space: pre;
+}
+
 .l-navigation > * + * {
   margin-left: 0.5rem;
 }
