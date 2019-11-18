@@ -4,7 +4,7 @@
   "description": "An Eleventy starter-kit designed to help you add rich features to a blog or website without the need for a complicated build process.",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
+    "start": "cross-env ELEVENTY_ENV=development npx eleventy clean && eleventy --serve",
     "build": "npx eleventy"
   },
   "keywords": [],
