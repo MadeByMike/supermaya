@@ -6,7 +6,7 @@
     <br>
     <p>See a <a href="https://supermaya-demo.netlify.com/">Live Demo</a>.</p>
     <p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/MadeByMike/supermaya">Deploy Supermaya on it's own</a></p>
-    <p><a href="https://heroku.com/deploy?template=https://github.com/MadeByMike/keystone-jamstack-plus">Deploy Supermaya with Keystone</a> to allow user generated content. <br>(following instructions during installation to connect the API).</p>
+    <p><a href="https://heroku.com/deploy?template=https://github.com/keystonejs/keystone-jamstack-plus">Deploy Supermaya with Keystone</a> to allow user generated content. <br>(following instructions during installation to connect the API).</p>
     <br>
     <br>
     
