@@ -19,7 +19,7 @@ Even good platforms and services don't always match what I'm trying to build and
 
 This is where JamStack sites can get complicated fast. Small compromises and clever work-arounds stack-up. Eventually some static sites can feel more stifling than the CMS monoliths and server configurations that caused many of us to move to static in the first place.
 
-I know I'm not the only one that has noticed this trend or remarked that the growing complexity of JAMstack sites is now often comparable to the set-up and matainance costs of platforms like WordPress. But usually without anywhere close to the equivlent editoral and administration experience.
+I know I'm not the only one that has noticed this trend or remarked that the growing complexity of JAMstack sites is now often comparable to the set-up and matainance costs of platforms like WordPress. But usually without anywhere close to the equivalent editoral and administration experience.
 
 Despite these gripes, I still really love the simplicity of static sites, together with the fact they are 100% configurable and self-managed. That's the feeling I want and not the feeling I've been getting from JAMstack recently.
 
