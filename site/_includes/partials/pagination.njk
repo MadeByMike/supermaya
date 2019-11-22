@@ -10,14 +10,14 @@
           </span>
 
           <span>
-            {{ paginationPrevText if paginationPrevText else 'Previous' }}
+            {{ paginationPrevText if paginationPrevText else 'Newer' }}
           </span>
         </a>
       {% endif %}
       {% if paginationNextUrl %}
         <a href="{{ paginationNextUrl }}" data-direction="forwards" class="l-pagination-link l-pagination-link--right">
           <span>
-            {{ paginationNextText if paginationNextText else 'Next' }}
+            {{ paginationNextText if paginationNextText else 'Older' }}
           </span>
           <span aria-hidden="true">
             {% include "partials/icons/arrow-right.svg" %}

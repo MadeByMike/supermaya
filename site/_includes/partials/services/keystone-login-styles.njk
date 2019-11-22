@@ -1,10 +1,3 @@
 {% if site.keystone.login !== false %}
-    {% if site.criticalCSS %}
-        <link rel="preload" as="style" href="/css/keystone-login.css" onload="this.rel='stylesheet'">
-        <noscript>
-            <link rel="stylesheet" href="/css/keystone-login.css">
-        </noscript>
-    {% else %}
-        <link rel="stylesheet" href="/css/keystone-login.css">
-    {% endif %}
+    <link rel="stylesheet" href="/css/keystone-login.css">
 {% endif %}

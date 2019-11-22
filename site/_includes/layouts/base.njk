@@ -11,14 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+    <link rel="stylesheet" href="/css/main.css">
 
-    {% if site.criticalCSS %}
-      <link rel="preload" as="style" href="/css/main.css" onload="this.rel='stylesheet'">
-      <noscript>
-        <link rel="stylesheet" href="/css/main.css">
-      </noscript>
-    {% else %}
-      <link rel="stylesheet" href="/css/main.css">
+    {% if extra_css %}
+      {% for item in extra_css %}
+        <link rel="stylesheet" href="{{item}}">
+      {% endfor %}
     {% endif %}
 
     {% include "partials/services/keystone-login-styles.njk" %}
@@ -55,5 +53,10 @@
     <script type="text/javascript" src="/js/service-worker.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
     {% include "partials/services/keystone-login-scripts.njk" %}
+    {% if extra_js %}
+      {% for item in extra_js %}
+        <script type="text/javascript" src="{{item}}"></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

@@ -9,7 +9,7 @@ h4 {
   line-height: calc(#{$RATIO} * 0.8);
   font-family: $FONT_HEADINGS;
   font-weight: 700;
-  hyphens: auto;
+  hyphens: none;
 }
 .h1,
 h1 {
