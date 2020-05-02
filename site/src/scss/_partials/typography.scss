@@ -66,10 +66,15 @@ code:not([class]) {
   font-family: $FONT_MONO;
   background: $COLOR_LIGHTER;
   border: solid 1px $COLOR_LIGHT;
-  padding: 0 5px;
 }
+
 pre:not([class]) {
   min-width: 300px;
+  padding: 5px 10px;
+}
+
+code:not([class]) {
+  padding: 0 5px;
 }
 
 pre:not([class]) code:not([class]) {
@@ -77,7 +82,7 @@ pre:not([class]) code:not([class]) {
   font-family: inherit;
   background: none;
   border: none;
-  padding: 0 5px;
+  padding: 0;
 }
 
 pre {

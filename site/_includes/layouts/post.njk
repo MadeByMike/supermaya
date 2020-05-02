@@ -21,7 +21,7 @@
     <article class="h-entry t-page" class="l-container">
       <div class="l-stack l-stack--large">
         {% include "partials/post-intro.njk" %}
-        <div class="l-container">
+        <div class="l-container l-measure">
           <div class="l-stack" >
             {{ content | safe }}
           </div>
@@ -50,7 +50,7 @@
         </footer>
       </div>
     </div>
-    <div class="l-container">
+    <div class="l-container l-measure">
       {% include "partials/services/keystone-comments.njk" %}
     </div>
   </div>

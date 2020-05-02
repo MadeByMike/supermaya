@@ -1,9 +1,11 @@
 .l-form-row > * {
   display: block;
 }
+
 .l-form-row > * + * {
   margin-top: 0.25rem;
 }
+
 .input {
   display: inline-block;
   width: 100%;

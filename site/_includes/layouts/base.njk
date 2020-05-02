@@ -11,6 +11,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+    
+    {% if site.theme %}
+    <style>
+      :root {
+        {% if site.theme.secondary.background %}
+          --THEME_BACKGROUND: {{site.theme.primary.background}};
+        {% endif %}
+        {% if site.theme.primary.text %}
+          --THEME_COLOR: {{site.theme.primary.text}};
+        {% endif %}
+        {% if site.theme.primary.highlight %}
+          --THEME_HIGHLIGHT: {{site.theme.primary.highlight}};
+        {% endif %}
+      }
+
+      .theme-secondary {
+        {% if site.theme.secondary.background %}
+          --THEME_BACKGROUND: {{site.theme.secondary.background}};
+        {% endif %}
+        {% if site.theme.secondary.text %}
+          --THEME_COLOR: {{site.theme.secondary.text}};
+        {% endif %}
+        {% if site.theme.secondary.highlight %}
+          --THEME_HIGHLIGHT: {{site.theme.secondary.highlight}};
+        {% endif %}
+      }
+    </style>
+    {% endif %}
+
     <link rel="stylesheet" href="/css/main.css">
 
     {% if extra_css %}
@@ -23,18 +52,6 @@
 
     {% include "partials/global/meta-info.njk" %}
     {% block head %}{% endblock %}
-    {% if site.theme %}
-      <style>
-        :root {
-          {% if site.theme.background %}
-            --THEME_COLOR: {{site.theme.background}};
-          {% endif %}
-          {% if site.theme.text %}
-            --THEME_TEXT: {{site.theme.text}};
-          {% endif %}
-        }
-      </style>
-    {% endif %}
 
   </head>
   <body>

@@ -13,3 +13,7 @@ $bp-container: 800px;
 .l-container {
   margin: 0 var(--container-margin);
 }
+
+.l-measure {
+  max-width: 65ch;
+}

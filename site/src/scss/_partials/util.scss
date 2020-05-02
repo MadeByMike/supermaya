@@ -24,12 +24,19 @@
 .invert-link {
   text-decoration: none;
 }
+
 .invert-link:hover,
 .invert-link:focus {
   text-decoration: underline;
 }
 
-.theme {
-  background: var(--THEME_COLOR, black);
-  color: var(--THEME_TEXT, white);
+.theme-bg {
+  background: var(--THEME_BACKGROUND, white);
+}
+.theme-color {
+  color: var(--THEME_COLOR, black);
+}
+
+.theme-hightlight {
+  color: var(--THEME_HIGHTLIGHT, yellow);
 }

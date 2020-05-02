@@ -1,6 +1,8 @@
 :root {
   line-height: $RATIO + 0.2;
   font-family: $FONT_NORMAL;
+  color: var(--THEME_COLOR, white);
+  background: var(--THEME_BACKGROUND, black);
 }
 
 @media (min-width: 800px) and (min-height: 500px) {
@@ -47,12 +49,15 @@ body {
   font-size: inherit;
   min-height: 100vh;
 }
-a:not([class]) {
+a {
   text-decoration: underline;
+  text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: auto;
   cursor: pointer;
 }
-a:not([class]):hover {
+
+a:focus,
+a:hover {
   text-decoration: none;
 }
 
@@ -74,7 +79,7 @@ img {
 }
 
 :focus {
-  outline: 2px solid $COLOR_LIGHT;
+  outline: 2px dashed $COLOR_MID;
   outline-offset: 2px;
 }
 [tabindex="-1"]:focus {

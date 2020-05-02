@@ -90,7 +90,7 @@ site/_data/navigation.json
 
 ## Color schemes
 
-Supermaya includes basic theming. Select an alternative to the black and white feature colors by modifying the `theme` key in:
+Supermaya includes basic theming. Select an alternative to the black and white feature colors by modifying the `theme` in:
 
 ```
 site/_data/site.js
@@ -98,7 +98,7 @@ site/_data/site.js
 
 ## Keystone features
 
-If you connected Supermaya to a keystone backend you can toggle features under the `keystone` key in:
+If you connected Supermaya to a keystone backend you can toggle features under `keystone` in:
 
 ```
 site/_data/site.js
