@@ -21,6 +21,8 @@
   <meta property="og:description" content="{{ metaDescription }}"/>
 {% endif %}
 
+{% set socialImage = social_image if social_image else site.socialImage %}
+
 {% if socialImage %}
   <meta property="og:image" content="{{ socialImage }}"/>
   <meta name="twitter:image" content="{{ socialImage }}"/>
