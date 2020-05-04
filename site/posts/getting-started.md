@@ -29,7 +29,7 @@ _\*Considerate means semantic, accessible mark-up, written for both humans and m
 
 Additional features:
 
-- Seemless JavaScript and SCSS compilation (no build process)
+- Seamless JavaScript and SCSS compilation (no build process)
 - Data-driven navigation
 - Customisable settings including theming
 
