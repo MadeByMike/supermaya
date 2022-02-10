@@ -29,7 +29,7 @@
     "html-minifier": "^4.0.0",
     "lozad": "^1.14.0",
     "memfs": "^3.1.2",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "slugify": "^1.4.0",
     "snarkdown": "^1.2.2",
     "svg-inline-loader": "^0.8.2",
